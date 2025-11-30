@@ -1,0 +1,31 @@
+# PyQt6 GUI
+PyQt6==6.6.1
+PyQt6-Qt6==6.6.1
+
+# YOLOv8 및 머신러닝
+ultralytics==8.1.20
+torch>=2.0.0
+torchvision>=0.15.0
+opencv-python==4.9.0.80
+
+# 이미지 처리
+Pillow==10.2.0
+numpy==1.26.3
+
+# 데이터 처리
+pandas==2.2.0
+openpyxl==3.1.2
+
+# 시각화
+matplotlib==3.8.2
+seaborn==0.13.1
+
+# 리포트 생성
+reportlab==4.0.9
+
+# Roboflow 데이터셋
+roboflow==1.1.20
+
+# 유틸리티
+tqdm==4.66.1
+pyyaml==6.0.1

@@ -1,0 +1,81 @@
+# ==========================================
+# Solder Bump Desktop - Git Ignore
+# ==========================================
+
+# ----- 데이터셋 (Roboflow에서 다운로드) -----
+data/
+
+# ----- 모델 가중치 -----
+# 사전 학습 모델 (다운로드 가능)
+yolov8n.pt
+yolov8s.pt
+yolov8m.pt
+yolov8l.pt
+yolov8x.pt
+
+# 학습 결과물 (last.pt는 제외, best.pt는 별도 보관)
+**/weights/last.pt
+
+# models/ 디렉토리의 best 가중치는 포함
+!models/
+
+# ----- 학습 실행 결과 -----
+runs/
+
+# ----- 캐시 파일 -----
+*.cache
+**/*.cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+.pytest_cache/
+
+# ----- macOS -----
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ----- IDE / Editor -----
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# ----- Python 환경 -----
+venv/
+env/
+.env
+.venv/
+ENV/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# ----- Jupyter Notebook -----
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ----- 로그 파일 -----
+*.log
+logs/
+
+# ----- 임시 파일 -----
+*.tmp
+*.temp
+*.bak
+.temp/
+tmp/
+
+# ----- 평가 결과 (재생성 가능) -----
+evaluation_results/
+
+# ----- train 폴더 내 runs -----
+train/runs/
+train/__pycache__/
+train/physics_xray_dataset/
