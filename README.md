@@ -1295,7 +1295,6 @@ pip install PyQt6 ultralytics opencv-python numpy
 | 모델 | 용도 | mAP@50 |
 |------|------|--------|
 | [`microscope_bga_best.pt`](./models/microscope_bga_best.pt) | BGA 솔더볼 (2 classes) | 88.7% |
-| [`microscope_merged_best.pt`](./models/microscope_merged_best.pt) | 통합 현미경 (4 classes) | 33.6% |
 | [`xray_physics_best.pt`](./models/xray_physics_best.pt) | X-ray 물리 시뮬레이션 (6 classes) | 93.2% |
 
 ---
