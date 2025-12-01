@@ -685,6 +685,12 @@ names:
   <img src="./presentation_materials/labels.jpg" width="600"/>
 </p>
 
+### 검증 샘플: 원본 vs 검출 결과
+
+| 원본 다이 이미지 | 결함 검출 결과 |
+|:---------------:|:-------------:|
+| ![Original](./presentation_materials/sample_die_image.png) | ![Detection](./presentation_materials/detection_result_clean.png) |
+
 ---
 
 ### 4.4.2 결함 검출 결과 (Defects Only)
