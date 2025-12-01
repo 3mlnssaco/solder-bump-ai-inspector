@@ -685,12 +685,6 @@ names:
   <img src="./presentation_materials/labels.jpg" width="600"/>
 </p>
 
-### 검증 샘플 예측 결과
-
-| Validation Batch 0 | Validation Batch 1 |
-|:------------------:|:------------------:|
-| ![Val Batch 0](./presentation_materials/val_batch0_pred.jpg) | ![Val Batch 1](./presentation_materials/val_batch1_pred.jpg) |
-
 ---
 
 ### 4.4.2 결함 검출 결과 (Defects Only)
