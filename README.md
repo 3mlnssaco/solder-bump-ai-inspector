@@ -41,6 +41,24 @@ YOLOv8 기반 반도체 웨이퍼 레벨 패키지(WLP) 솔더 범프 결함 검
   <img src="./presentation_materials/confusion_matrix_normalized.png" width="500"/>
 </p>
 
+### PR Curve & F1 Curve
+
+| PR Curve | F1 Curve |
+|:--------:|:--------:|
+| ![PR Curve](./presentation_materials/BoxPR_curve.png) | ![F1 Curve](./presentation_materials/BoxF1_curve.png) |
+
+### 검증 샘플 예측 결과
+
+| Validation Batch 0 | Validation Batch 1 |
+|:------------------:|:------------------:|
+| ![Val Batch 0](./presentation_materials/val_batch0_pred.jpg) | ![Val Batch 1](./presentation_materials/val_batch1_pred.jpg) |
+
+### 라벨 분포
+
+<p align="center">
+  <img src="./presentation_materials/labels.jpg" width="600"/>
+</p>
+
 ## 프로젝트 구조
 
 ```
@@ -104,6 +122,26 @@ python evaluate_model.py
 | Crack | 균열 |
 | Normal | 정상 |
 
+### 결함 샘플 비교
+<p align="center">
+  <img src="./presentation_materials/defect_samples/defect_comparison.png" width="700"/>
+</p>
+
+### 결함 유형별 샘플
+
+| Normal | Void | Bridge |
+|:------:|:----:|:------:|
+| ![Normal](./presentation_materials/defect_samples/sample_normal.png) | ![Void](./presentation_materials/defect_samples/sample_void.png) | ![Bridge](./presentation_materials/defect_samples/sample_bridge.png) |
+
+| HiP | ColdJoint | Crack |
+|:---:|:---------:|:-----:|
+| ![HiP](./presentation_materials/defect_samples/sample_hip.png) | ![ColdJoint](./presentation_materials/defect_samples/sample_coldjoint.png) | ![Crack](./presentation_materials/defect_samples/sample_crack.png) |
+
+### 결함 가이드
+<p align="center">
+  <img src="./presentation_materials/defect_samples/defect_guide.png" width="600"/>
+</p>
+
 ### 현미경 검출 대상
 - **Type1**: 정상 솔더볼
 - **Type2**: 결함 솔더볼
@@ -132,6 +170,53 @@ python evaluate_model.py
 ### 웨이퍼 맵
 <p align="center">
   <img src="./presentation_materials/wafer_map_full.png" width="500"/>
+</p>
+
+### 샘플 다이 이미지
+<p align="center">
+  <img src="./presentation_materials/sample_die_image.png" width="400"/>
+</p>
+
+### 결함 검출 결과
+<p align="center">
+  <img src="./presentation_materials/detection_result_clean.png" width="600"/>
+</p>
+
+### 결함 하이라이트
+<p align="center">
+  <img src="./presentation_materials/defects_only_highlighted.png" width="600"/>
+</p>
+
+### 현미경 샘플 (개별)
+
+| Sample 1 | Sample 2 | Sample 3 |
+|:--------:|:--------:|:--------:|
+| ![Sample 1](./presentation_materials/microscope_samples/sample_1.jpg) | ![Sample 2](./presentation_materials/microscope_samples/sample_2.jpg) | ![Sample 3](./presentation_materials/microscope_samples/sample_3.jpg) |
+
+| Sample 4 | Sample 5 | Sample 6 |
+|:--------:|:--------:|:--------:|
+| ![Sample 4](./presentation_materials/microscope_samples/sample_4.jpg) | ![Sample 5](./presentation_materials/microscope_samples/sample_5.jpg) | ![Sample 6](./presentation_materials/microscope_samples/sample_6.jpg) |
+
+## 실패 분석 (Failure Analysis)
+
+### HiP vs Normal 혼동 분석
+<p align="center">
+  <img src="./presentation_materials/failure_analysis/hip_vs_normal_confusion.png" width="500"/>
+</p>
+
+### ColdJoint vs Normal 혼동 분석
+<p align="center">
+  <img src="./presentation_materials/failure_analysis/coldjoint_vs_normal_confusion.png" width="500"/>
+</p>
+
+### 오류 분석 차트
+<p align="center">
+  <img src="./presentation_materials/failure_analysis/error_analysis_charts.png" width="600"/>
+</p>
+
+### Feature 중요도
+<p align="center">
+  <img src="./presentation_materials/failure_analysis/feature_importance.png" width="500"/>
 </p>
 
 ## 주요 파일
