@@ -2,7 +2,7 @@
 
 YOLOv8 기반 반도체 웨이퍼 레벨 패키지(WLP) 솔더 범프 결함 검출 시스템
 
-![Detection Result](presentation_materials/detection_result_clean.png)
+![Detection Result](./presentation_materials/detection_result_clean.png)
 
 ## 주요 기능
 
@@ -15,22 +15,30 @@ YOLOv8 기반 반도체 웨이퍼 레벨 패키지(WLP) 솔더 범프 결함 검
 
 ### 모델 성능
 
-| 모델 | 용도 | mAP@50 | mAP@50-95 |
-|------|------|--------|-----------|
-| `microscope_bga_best.pt` | BGA 솔더볼 (2 classes) | **78.0%** | 47.7% |
-| `microscope_merged_best.pt` | 통합 현미경 (4 classes) | 33.6% | 20.8% |
-| `xray_physics_best.pt` | X-ray 물리 시뮬레이션 (6 classes) | - | - |
+| 모델 | 용도 | mAP@50 | mAP@50-95 | 비고 |
+|------|------|--------|-----------|------|
+| [`microscope_bga_best.pt`](./models/microscope_bga_best.pt) | BGA 솔더볼 (2 classes) | **88.7%** | 56.5% | YOLOv8n, 110 epochs |
+| [`microscope_merged_best.pt`](./models/microscope_merged_best.pt) | 통합 현미경 (4 classes) | 33.6% | 20.8% | |
+| [`xray_physics_best.pt`](./models/xray_physics_best.pt) | X-ray 물리 시뮬레이션 (6 classes) | 93.2% | 87.6% | |
+
+### 학습 진행 (BGA 모델)
+
+| 단계 | Epochs | mAP@50 | 학습률 |
+|------|--------|--------|--------|
+| 1차 학습 | 50 | 85.1% | lr=0.001 |
+| Fine-tune #1 | +30 | 87.4% | lr=0.0005 |
+| Fine-tune #2 | +30 | **88.7%** | lr=0.0002 |
 
 ### 학습 곡선
 
 <p align="center">
-  <img src="presentation_materials/results.png" width="600"/>
+  <img src="./presentation_materials/results.png" width="600"/>
 </p>
 
 ### 혼동 행렬
 
 <p align="center">
-  <img src="presentation_materials/confusion_matrix_normalized.png" width="500"/>
+  <img src="./presentation_materials/confusion_matrix_normalized.png" width="500"/>
 </p>
 
 ## 프로젝트 구조
@@ -118,18 +126,27 @@ python evaluate_model.py
 
 ### 현미경 샘플
 <p align="center">
-  <img src="presentation_materials/microscope_samples/microscope_samples_grid.jpg" width="600"/>
+  <img src="./presentation_materials/microscope_samples/microscope_samples_grid.jpg" width="600"/>
 </p>
 
 ### 웨이퍼 맵
 <p align="center">
-  <img src="presentation_materials/wafer_map_full.png" width="500"/>
+  <img src="./presentation_materials/wafer_map_full.png" width="500"/>
 </p>
+
+## 주요 파일
+
+| 파일 | 설명 |
+|------|------|
+| [`demo_gui.py`](./demo_gui.py) | GUI 데모 애플리케이션 |
+| [`evaluate_model.py`](./evaluate_model.py) | 모델 평가 스크립트 |
+| [`REPORT.md`](./REPORT.md) | 상세 연구 보고서 |
+| [`requirements.txt`](./requirements.txt) | Python 의존성 목록 |
 
 ## 참고 문헌
 
-- Ultralytics YOLOv8: https://docs.ultralytics.com/
-- Roboflow Universe: https://universe.roboflow.com/
+- [Ultralytics YOLOv8](https://docs.ultralytics.com/)
+- [Roboflow Universe](https://universe.roboflow.com/)
 
 ## License
 
